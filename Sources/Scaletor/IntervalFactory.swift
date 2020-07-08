@@ -13,32 +13,30 @@ struct IntervalFactory {
     private static func nextAccidental(interval: Interval, to note: Note) -> Accidental {
         if interval == .semitone {
             switch note.accidental {
-            // Bb -> Cb (Cb major)
+
             case .flat where note.pitch.isSpecialPitch:
                 return .flat
 
-            // Ab -> Bbb?
             case .flat:
-                fatalError("Not sure how to add a semitone to \(note)")
+                return .doubleFlat
 
-            // B -> C
             case .natural where note.pitch.isSpecialPitch:
                 return .natural
 
-            // A -> Bb
             case .natural:
                 return .flat
 
-            // B# ???
-            case .sharp where note.pitch.isSpecialPitch:
-                fatalError("Not sure how to add a semitone to \(note)")
-
-            // F# -> G
             case .sharp:
                 return .natural
+
+            default:
+                fatalError("Not sure how to add a semitone to \(note)")
             }
         } else {
             switch note.accidental {
+            case .doubleFlat where note.pitch.isSpecialPitch:
+                return .flat
+
             case .flat where note.pitch.isSpecialPitch:
                 return .natural
 
