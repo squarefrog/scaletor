@@ -32,6 +32,9 @@ struct IntervalFactory {
             case .sharp:
                 return .natural
 
+            case .doubleSharp:
+                return .sharp
+
             default:
                 fatalError("Not sure how to add a semitone to \(note)")
             }
@@ -47,7 +50,7 @@ struct IntervalFactory {
                 return .sharp
 
             case .sharp where note.pitch.isSpecialPitch:
-                fatalError("Unsure how to add a tone to \(note)")
+                return .doubleSharp
 
             default:
                 return note.accidental
