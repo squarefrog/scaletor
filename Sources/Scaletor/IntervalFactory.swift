@@ -26,6 +26,9 @@ struct IntervalFactory {
             case .natural:
                 return .flat
 
+            case .sharp where note.pitch.isSpecialPitch:
+                return .sharp
+
             case .sharp:
                 return .natural
 
