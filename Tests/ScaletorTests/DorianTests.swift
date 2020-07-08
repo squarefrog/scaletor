@@ -73,19 +73,4 @@ final class DorianTests: XCTestCase {
             try Scaletor.generateScale(withRoot: Note(pitch: .f), in: .dorian)
         }
     }
-
-    static var allTests = [
-        ("test_Generate_C_Dorian_Scale", test_Generate_C_Dorian_Scale),
-        ("test_Generate_G_Dorian_Scale", test_Generate_G_Dorian_Scale),
-        ("test_Generate_D_Dorian_Scale", test_Generate_D_Dorian_Scale),
-        ("test_Generate_A_Dorian_Scale", test_Generate_A_Dorian_Scale),
-        ("test_Generate_E_Dorian_Scale", test_Generate_E_Dorian_Scale),
-        ("test_Generate_B_Dorian_Scale", test_Generate_B_Dorian_Scale),
-        ("test_Generate_Gb_Dorian_Scale", test_Generate_Gb_Dorian_Scale),
-        ("test_Generate_Db_Dorian_Scale", test_Generate_Db_Dorian_Scale),
-        ("test_Generate_Ab_Dorian_Scale", test_Generate_Ab_Dorian_Scale),
-        ("test_Generate_Eb_Dorian_Scale", test_Generate_Eb_Dorian_Scale),
-        ("test_Generate_Bb_Dorian_Scale", test_Generate_Bb_Dorian_Scale),
-        ("test_Generate_F_Dorian_Scale", test_Generate_F_Dorian_Scale)
-    ]
 }

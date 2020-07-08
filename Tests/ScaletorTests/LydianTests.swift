@@ -73,19 +73,4 @@ final class LydianTests: XCTestCase {
             try Scaletor.generateScale(withRoot: Note(pitch: .f), in: .lydian)
         }
     }
-
-    static var allTests = [
-        ("test_Generate_C_Lydian_Scale", test_Generate_C_Lydian_Scale),
-        ("test_Generate_G_Lydian_Scale", test_Generate_G_Lydian_Scale),
-        ("test_Generate_D_Lydian_Scale", test_Generate_D_Lydian_Scale),
-        ("test_Generate_A_Lydian_Scale", test_Generate_A_Lydian_Scale),
-        ("test_Generate_E_Lydian_Scale", test_Generate_E_Lydian_Scale),
-        ("test_Generate_B_Lydian_Scale", test_Generate_B_Lydian_Scale),
-        ("test_Generate_Gb_Lydian_Scale", test_Generate_Gb_Lydian_Scale),
-        ("test_Generate_Db_Lydian_Scale", test_Generate_Db_Lydian_Scale),
-        ("test_Generate_Ab_Lydian_Scale", test_Generate_Ab_Lydian_Scale),
-        ("test_Generate_Eb_Lydian_Scale", test_Generate_Eb_Lydian_Scale),
-        ("test_Generate_Bb_Lydian_Scale", test_Generate_Bb_Lydian_Scale),
-        ("test_Generate_F_Lydian_Scale", test_Generate_F_Lydian_Scale)
-    ]
 }

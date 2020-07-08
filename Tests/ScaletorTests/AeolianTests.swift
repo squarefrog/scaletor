@@ -73,19 +73,4 @@ final class AeolianTests: XCTestCase {
             try Scaletor.generateScale(withRoot: Note(pitch: .f), in: .aeolian)
         }
     }
-
-    static var allTests = [
-        ("test_Generate_C_Aeolian_Scale", test_Generate_C_Aeolian_Scale),
-        ("test_Generate_G_Aeolian_Scale", test_Generate_G_Aeolian_Scale),
-        ("test_Generate_D_Aeolian_Scale", test_Generate_D_Aeolian_Scale),
-        ("test_Generate_A_Aeolian_Scale", test_Generate_A_Aeolian_Scale),
-        ("test_Generate_E_Aeolian_Scale", test_Generate_E_Aeolian_Scale),
-        ("test_Generate_B_Aeolian_Scale", test_Generate_B_Aeolian_Scale),
-        ("test_Generate_Gb_Aeolian_Scale", test_Generate_Gb_Aeolian_Scale),
-        ("test_Generate_Db_Aeolian_Scale", test_Generate_Db_Aeolian_Scale),
-        ("test_Generate_Ab_Aeolian_Scale", test_Generate_Ab_Aeolian_Scale),
-        ("test_Generate_Eb_Aeolian_Scale", test_Generate_Eb_Aeolian_Scale),
-        ("test_Generate_Bb_Aeolian_Scale", test_Generate_Bb_Aeolian_Scale),
-        ("test_Generate_F_Aeolian_Scale", test_Generate_F_Aeolian_Scale)
-    ]
 }

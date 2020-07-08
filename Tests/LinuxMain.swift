@@ -1,7 +1,1 @@
-import XCTest
-
-import ScaletorTests
-
-var tests = [XCTestCaseEntry]()
-tests += ScaletorTests.allTests()
-XCTMain(tests)
+fatalError("Run the tests with `swift test --enable-test-discovery`.")

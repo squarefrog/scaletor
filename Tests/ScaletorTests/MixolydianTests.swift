@@ -73,19 +73,4 @@ final class MixolydianTests: XCTestCase {
             try Scaletor.generateScale(withRoot: Note(pitch: .f), in: .mixolydian)
         }
     }
-
-    static var allTests = [
-        ("test_Generate_C_Mixolydian_Scale", test_Generate_C_Mixolydian_Scale),
-        ("test_Generate_G_Mixolydian_Scale", test_Generate_G_Mixolydian_Scale),
-        ("test_Generate_D_Mixolydian_Scale", test_Generate_D_Mixolydian_Scale),
-        ("test_Generate_A_Mixolydian_Scale", test_Generate_A_Mixolydian_Scale),
-        ("test_Generate_E_Mixolydian_Scale", test_Generate_E_Mixolydian_Scale),
-        ("test_Generate_B_Mixolydian_Scale", test_Generate_B_Mixolydian_Scale),
-        ("test_Generate_Gb_Mixolydian_Scale", test_Generate_Gb_Mixolydian_Scale),
-        ("test_Generate_Db_Mixolydian_Scale", test_Generate_Db_Mixolydian_Scale),
-        ("test_Generate_Ab_Mixolydian_Scale", test_Generate_Ab_Mixolydian_Scale),
-        ("test_Generate_Eb_Mixolydian_Scale", test_Generate_Eb_Mixolydian_Scale),
-        ("test_Generate_Bb_Mixolydian_Scale", test_Generate_Bb_Mixolydian_Scale),
-        ("test_Generate_F_Mixolydian_Scale", test_Generate_F_Mixolydian_Scale)
-    ]
 }

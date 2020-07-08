@@ -73,19 +73,4 @@ final class IonianTests: XCTestCase {
             try Scaletor.generateScale(withRoot: Note(pitch: .f), in: .ionian)
         }
     }
-
-    static var allTests = [
-        ("test_Generate_C_Ionian_Scale", test_Generate_C_Ionian_Scale),
-        ("test_Generate_G_Ionian_Scale", test_Generate_G_Ionian_Scale),
-        ("test_Generate_D_Ionian_Scale", test_Generate_D_Ionian_Scale),
-        ("test_Generate_A_Ionian_Scale", test_Generate_A_Ionian_Scale),
-        ("test_Generate_E_Ionian_Scale", test_Generate_E_Ionian_Scale),
-        ("test_Generate_B_Ionian_Scale", test_Generate_B_Ionian_Scale),
-        ("test_Generate_Gb_Ionian_Scale", test_Generate_Gb_Ionian_Scale),
-        ("test_Generate_Db_Ionian_Scale", test_Generate_Db_Ionian_Scale),
-        ("test_Generate_Ab_Ionian_Scale", test_Generate_Ab_Ionian_Scale),
-        ("test_Generate_Eb_Ionian_Scale", test_Generate_Eb_Ionian_Scale),
-        ("test_Generate_Bb_Ionian_Scale", test_Generate_Bb_Ionian_Scale),
-        ("test_Generate_F_Ionian_Scale", test_Generate_F_Ionian_Scale)
-    ]
 }

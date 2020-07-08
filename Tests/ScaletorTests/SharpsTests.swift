@@ -43,14 +43,4 @@ final class SharpsTests: XCTestCase {
             try Scaletor.generateScale(withRoot: Note(pitch: .b, accidental: .sharp), in: .ionian)
         }
     }
-
-    static var allTests = [
-        ("test_Generate_C_Sharp_Scale", test_Generate_C_Sharp_Scale),
-        ("test_Generate_D_Sharp_Scale", test_Generate_D_Sharp_Scale),
-        ("test_Generate_E_Sharp_Scale", test_Generate_E_Sharp_Scale),
-        ("test_Generate_F_Sharp_Scale", test_Generate_F_Sharp_Scale),
-        ("test_Generate_G_Sharp_Scale", test_Generate_G_Sharp_Scale),
-        ("test_Generate_A_Sharp_Scale", test_Generate_A_Sharp_Scale),
-        ("test_Generate_B_Sharp_Scale", test_Generate_B_Sharp_Scale),
-    ]
 }

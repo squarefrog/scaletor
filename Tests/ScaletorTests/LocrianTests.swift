@@ -73,19 +73,4 @@ final class LocrianTests: XCTestCase {
             try Scaletor.generateScale(withRoot: Note(pitch: .f), in: .locrian)
         }
     }
-
-    static var allTests = [
-        ("test_Generate_C_Locrian_Scale", test_Generate_C_Locrian_Scale),
-        ("test_Generate_G_Locrian_Scale", test_Generate_G_Locrian_Scale),
-        ("test_Generate_D_Locrian_Scale", test_Generate_D_Locrian_Scale),
-        ("test_Generate_A_Locrian_Scale", test_Generate_A_Locrian_Scale),
-        ("test_Generate_E_Locrian_Scale", test_Generate_E_Locrian_Scale),
-        ("test_Generate_B_Locrian_Scale", test_Generate_B_Locrian_Scale),
-        ("test_Generate_Gb_Locrian_Scale", test_Generate_Gb_Locrian_Scale),
-        ("test_Generate_Db_Locrian_Scale", test_Generate_Db_Locrian_Scale),
-        ("test_Generate_Ab_Locrian_Scale", test_Generate_Ab_Locrian_Scale),
-        ("test_Generate_Eb_Locrian_Scale", test_Generate_Eb_Locrian_Scale),
-        ("test_Generate_Bb_Locrian_Scale", test_Generate_Bb_Locrian_Scale),
-        ("test_Generate_F_Locrian_Scale", test_Generate_F_Locrian_Scale)
-    ]
 }

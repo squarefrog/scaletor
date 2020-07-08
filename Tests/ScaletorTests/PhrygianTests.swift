@@ -73,19 +73,4 @@ final class PhrygianTests: XCTestCase {
             try Scaletor.generateScale(withRoot: Note(pitch: .f), in: .phrygian)
         }
     }
-
-    static var allTests = [
-        ("test_Generate_C_Phrygian_Scale", test_Generate_C_Phrygian_Scale),
-        ("test_Generate_G_Phrygian_Scale", test_Generate_G_Phrygian_Scale),
-        ("test_Generate_D_Phrygian_Scale", test_Generate_D_Phrygian_Scale),
-        ("test_Generate_A_Phrygian_Scale", test_Generate_A_Phrygian_Scale),
-        ("test_Generate_E_Phrygian_Scale", test_Generate_E_Phrygian_Scale),
-        ("test_Generate_B_Phrygian_Scale", test_Generate_B_Phrygian_Scale),
-        ("test_Generate_Gb_Phrygian_Scale", test_Generate_Gb_Phrygian_Scale),
-        ("test_Generate_Db_Phrygian_Scale", test_Generate_Db_Phrygian_Scale),
-        ("test_Generate_Ab_Phrygian_Scale", test_Generate_Ab_Phrygian_Scale),
-        ("test_Generate_Eb_Phrygian_Scale", test_Generate_Eb_Phrygian_Scale),
-        ("test_Generate_Bb_Phrygian_Scale", test_Generate_Bb_Phrygian_Scale),
-        ("test_Generate_F_Phrygian_Scale", test_Generate_F_Phrygian_Scale)
-    ]
 }
