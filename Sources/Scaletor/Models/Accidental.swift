@@ -6,7 +6,9 @@ public enum Accidental {
     case natural
     case sharp
     case doubleSharp
+}
 
+extension Accidental {
     public var description: String {
         switch self {
         case .doubleFlat:

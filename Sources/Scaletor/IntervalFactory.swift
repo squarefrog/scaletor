@@ -1,64 +1,63 @@
 import Foundation
 
-struct IntervalFactory {
+internal struct IntervalFactory {
     private init() {}
 
-    static func apply(interval: Interval, to note: Note) -> Note {
-        let currentIndex = Pitch.allCases.firstIndex(of: note.pitch)!
-        let nextPitch = Pitch.allCases.item(atWrappedIndex: currentIndex + 1)
+    internal static func apply(interval: Interval, to note: Note) -> Note {
         let newAccidental = nextAccidental(interval: interval, to: note)
-        return Note(pitch: nextPitch, accidental: newAccidental)
+        return Note(pitch: note.pitch.next, accidental: newAccidental)
     }
 
     private static func nextAccidental(interval: Interval, to note: Note) -> Accidental {
-        if interval == .semitone {
-            switch note.accidental {
-
-            case .flat where note.pitch.isSpecialPitch:
-                return .flat
-
-            case .flat:
-                return .doubleFlat
-
-            case .natural where note.pitch.isSpecialPitch:
-                return .natural
-
-            case .natural:
-                return .flat
-
-            case .sharp where note.pitch.isSpecialPitch:
-                return .sharp
-
-            case .sharp:
-                return .natural
-
-            case .doubleSharp:
-                return .sharp
-
-            default:
-                fatalError("Not sure how to add a semitone to \(note)")
-            }
-        } else {
-            switch note.accidental {
-            case .doubleFlat where note.pitch.isSpecialPitch:
-                return .flat
-
-            case .flat where note.pitch.isSpecialPitch:
-                return .natural
-
-            case .natural where note.pitch.isSpecialPitch:
-                return .sharp
-
-            case .sharp where note.pitch.isSpecialPitch:
-                return .doubleSharp
-
-            default:
-                return note.accidental
-            }
+        switch interval {
+        case .semitone where note.pitch.isSpecialPitch:
+            return note.accidental
+        case .semitone:
+            return note.accidental.lower
+        case .tone where note.pitch.isSpecialPitch:
+            return note.accidental.raise
+        case .tone:
+            return note.accidental
         }
     }
 }
 
-extension Pitch {
+fileprivate extension Pitch {
     var isSpecialPitch: Bool { self == .b || self == .e }
+    var next: Pitch {
+        let nextIndex = Self.allCases.firstIndex(of: self)! + 1
+        return Self.allCases[nextIndex % Self.allCases.count]
+    }
+}
+
+fileprivate extension Accidental {
+    var lower: Accidental {
+        switch self {
+        case .doubleFlat:
+            fatalError("Triple flats are not supported")
+        case .flat:
+            return .doubleFlat
+        case .natural:
+            return .flat
+        case .sharp:
+            return .natural
+        case .doubleSharp:
+            return .sharp
+        }
+    }
+
+    var raise: Accidental {
+        switch self {
+        case .doubleFlat:
+            return .flat
+        case .flat:
+            return .natural
+        case .natural:
+            return .sharp
+        case .sharp:
+            return .doubleSharp
+        case .doubleSharp:
+            fatalError("Triple sharps are not supported")
+        }
+    }
 }
