@@ -10,11 +10,11 @@ internal struct IntervalFactory {
 
     private static func nextAccidental(interval: Interval, to note: Note) -> Accidental {
         switch interval {
-        case .semitone where note.pitch.isSpecialPitch:
+        case .semitone where note.pitch.isSemitonePitch:
             return note.accidental
         case .semitone:
             return note.accidental.lower
-        case .tone where note.pitch.isSpecialPitch:
+        case .tone where note.pitch.isSemitonePitch:
             return note.accidental.raise
         case .tone:
             return note.accidental
@@ -23,7 +23,7 @@ internal struct IntervalFactory {
 }
 
 fileprivate extension Pitch {
-    var isSpecialPitch: Bool { self == .b || self == .e }
+    var isSemitonePitch: Bool { self == .b || self == .e }
     var next: Pitch {
         let nextIndex = Self.allCases.firstIndex(of: self)! + 1
         return Self.allCases[nextIndex % Self.allCases.count]
