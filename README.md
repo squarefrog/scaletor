@@ -22,7 +22,7 @@ Scaletor can be installed using Swift Package Manager. To include it in your pro
 
 Scaletor has a comprehensive test suite, which may be run either through Xcode or by running the following command in Terminal:
 
-   $ swift test
+    $ swift test
 
 ## What's up with the name?
 
