@@ -9,6 +9,17 @@ public enum Accidental {
 }
 
 extension Accidental {
+    public init(rawValue: String) {
+        switch rawValue {
+        case "♭", "b":
+            self = .flat
+        case "♯", "#":
+            self = .sharp
+        default:
+            self = .natural
+        }
+    }
+
     public var description: String {
         switch self {
         case .doubleFlat:
