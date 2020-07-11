@@ -3,7 +3,7 @@ import Foundation
 public enum Mode: String, CaseIterable {
     case ionian, dorian, phrygian, lydian, mixolydian, aeolian, locrian
 
-    public var chordVoicings: [ChordVoicing] {
+    public var chords: [Chord] {
         [.major, .minor, .minor, .major, .major, .minor, .diminished]
             .offset(by: index)
     }

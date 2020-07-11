@@ -9,7 +9,10 @@ public extension Chord {
         case short, medium, full
     }
 
-    func describe(using style: Style) -> String {
+    /// Return a text description of a chord with a given formatter style.
+    /// - Parameter style: Short, medium or full style
+    /// - Returns: A string description of a chord
+    func describe(using style: Style = .full) -> String {
         switch style {
         case .short:
             return shortStyle
