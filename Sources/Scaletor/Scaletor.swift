@@ -1,7 +1,6 @@
 public struct Scaletor {
     private init() {}
 
-
     /// Generate a scale for a given root note and mode.
     ///
     /// - Parameters:
