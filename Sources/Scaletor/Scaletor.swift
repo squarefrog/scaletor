@@ -6,18 +6,16 @@ public struct Scaletor {
     /// - Parameters:
     ///   - note: A root note to base the scale off
     ///   - mode: The mode to use when generating the scale
-    /// - Throws: `ScaleError.theoreticalKey` if the root note is either double
-    ///           flat or double sharp.
+    /// - Throws: `ScaleError.theoreticalKey` if the root note is either double flat or double sharp.
     /// - Returns: An array of notes corresponding to a scale.
-    public static func generateScale(withRoot note: Note, in mode: Mode) throws -> [Note] {
+    public static func generateScale(from root: Note, for mode: Mode) throws -> [Note] {
         guard
-            note.accidental != .doubleFlat,
-            note.accidental != .doubleSharp
+            root.accidental != .doubleFlat,
+            root.accidental != .doubleSharp
             else { throw ScaleError.theoreticalKey }
 
-        var notes = [note]
-        var lastNote = note
-
+        var notes = [root]
+        var lastNote = root
         for i in 0...5 {
             let interval = mode.intervals[i]
             let nextNote = IntervalFactory.apply(interval: interval, to: lastNote)
