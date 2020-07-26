@@ -16,7 +16,7 @@ public struct Scaletor {
 
         var notes = [root]
         var lastNote = root
-        for i in 0...5 {
+        for i in 0 ..< mode.intervals.count - 1 {
             let interval = mode.intervals[i]
             let nextNote = IntervalFactory.apply(interval: interval, to: lastNote)
             notes.append(nextNote)

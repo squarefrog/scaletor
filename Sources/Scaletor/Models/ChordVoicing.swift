@@ -1,10 +1,10 @@
 import Foundation
 
-public enum Chord: String {
-    case major, minor, diminished
+public enum ChordVoicing: String {
+    case major, minor, diminished, augmented
 }
 
-public extension Chord {
+public extension ChordVoicing {
     enum Style {
         case short, medium, full
     }
@@ -31,6 +31,8 @@ public extension Chord {
             return "M"
         case .diminished:
             return "o"
+        case .augmented:
+            return "+"
         }
     }
 
@@ -42,6 +44,8 @@ public extension Chord {
             return "Maj"
         case .diminished:
             return "Dim"
+        case .augmented:
+            return "Aug"
         }
     }
 
