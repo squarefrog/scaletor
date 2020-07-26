@@ -1,8 +1,10 @@
 import Foundation
 
-public enum Mode: String, CaseIterable {
+public enum MajorMode: String, CaseIterable {
     case ionian, dorian, phrygian, lydian, mixolydian, aeolian, locrian
+}
 
+extension MajorMode: Mode {
     public var chords: [ChordVoicing] {
         [.major, .minor, .minor, .major, .major, .minor, .diminished]
             .offset(by: index)

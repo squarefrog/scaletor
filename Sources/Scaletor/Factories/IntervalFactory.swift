@@ -18,6 +18,10 @@ internal struct IntervalFactory {
             return note.accidental.raise
         case .tone:
             return note.accidental
+        case .toneAndHalf where note.pitch.isSemitonePitch:
+            return note.accidental.raise.raise
+        case .toneAndHalf:
+            return note.accidental.raise
         }
     }
 }
