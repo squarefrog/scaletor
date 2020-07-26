@@ -6,6 +6,7 @@ public enum MinorMode: String, CaseIterable {
     case ionianSharpFive
     case dorianSharpFour
     case phrygianDominant
+    case lydianSharpTwo
 }
 
 extension MinorMode: Mode {
