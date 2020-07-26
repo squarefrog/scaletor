@@ -10,7 +10,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - `Mode` protocol
-- `HarmonicMinorMode` fixes #1
+- Harmonic Minor modes (fixes #1)
+- Melodic Minor modes
 
 ### Breaking
 

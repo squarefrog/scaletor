@@ -14,6 +14,12 @@ let lydian = try Scaletor.generateScale(from: root, for: .lydian)
 print(lydian) // C D E F♯ G A B
 ```
 
+## Supported modes
+
+- Major scale modes (also known as the church modes)
+- Harmonic Minor scale modes
+- Melodic Minor scale modes
+
 ## Installing
 
 Scaletor can be installed using Swift Package Manager. To include it in your project, simply [add the Package](https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app) using Xcode 11 or higher.
