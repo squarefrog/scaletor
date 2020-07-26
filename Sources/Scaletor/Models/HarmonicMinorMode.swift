@@ -1,6 +1,6 @@
 import Foundation
 
-public enum MinorMode: String, CaseIterable {
+public enum HarmonicMinorMode: String, CaseIterable {
     case harmonicMinor
     case locrianSharpSix
     case ionianSharpFive
@@ -10,7 +10,7 @@ public enum MinorMode: String, CaseIterable {
     case ultraLocrian
 }
 
-extension MinorMode: Mode {
+extension HarmonicMinorMode: Mode {
     public var chords: [ChordVoicing] {
         [.minor, .diminished, .augmented, .minor, .major, .major, .diminished]
             .offset(by: index)
