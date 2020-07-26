@@ -3,6 +3,7 @@ import Foundation
 public enum MinorMode: String, CaseIterable {
     case harmonicMinor
     case locrianSharpSix
+    case ionianSharpFive
 }
 
 extension MinorMode: Mode {
