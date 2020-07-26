@@ -7,6 +7,7 @@ public enum MelodicMinorMode: String, CaseIterable {
     case lydianDominant
     case mixolydianFlatSix
     case aeolianFlatFive
+    case superLocrian
 }
 
 extension MelodicMinorMode: Mode {
