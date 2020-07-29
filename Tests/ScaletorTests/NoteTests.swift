@@ -43,4 +43,9 @@ class NoteTests: XCTestCase {
         XCTAssertThrowsError(try Note("Bbb")) { error = $0 }
         XCTAssertEqual(error as? NoteError, .outOfBounds)
     }
+
+    func test_Description() {
+        let note = Note(pitch: .b, accidental: .sharp)
+        XCTAssertEqual("\(note)", "B♯")
+    }
 }
