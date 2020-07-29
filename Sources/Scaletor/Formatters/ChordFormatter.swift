@@ -1,9 +1,11 @@
 import Foundation
 
 public struct ChordFormatter {
-    public var style = Style.full
+    public var style: Style
 
-    public init() { }
+    public init(style: Style = .full) {
+        self.style = style
+    }
 
     /// Produce a string representation of a chord
     /// - Parameter chord: The chord to describe
