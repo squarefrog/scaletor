@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Breaking
+
+- Extract `ChordVoicing` description method to `ChordFormatter`
+
+### Added
+
+- Make chord progressions for mode
+- `ChordFormatter` to produce string descriptions of chords easily, with style options
+
 ## [2.0.0] - 2020-07-26
 
 ### Added

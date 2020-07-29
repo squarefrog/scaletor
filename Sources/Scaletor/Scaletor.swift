@@ -25,4 +25,9 @@ public struct Scaletor {
 
         return notes
     }
+
+    public static func makeChords(with root: Note, for mode: Mode) throws -> [Chord] {
+        let scale = try generateScale(from: root, for: mode)
+        return zip(scale, mode.chords).map(Chord.init)
+    }
 }
