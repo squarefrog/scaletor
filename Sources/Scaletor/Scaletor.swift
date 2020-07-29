@@ -8,7 +8,7 @@ public struct Scaletor {
     ///   - mode: The mode to use when generating the scale
     /// - Throws: `ScaleError.theoreticalKey` if the root note is either double flat or double sharp.
     /// - Returns: An array of notes corresponding to a scale.
-    public static func generateScale(from root: Note, for mode: Mode) throws -> [Note] {
+    public static func makeScale(from root: Note, for mode: Mode) throws -> [Note] {
         guard
             root.accidental != .doubleFlat,
             root.accidental != .doubleSharp
@@ -24,5 +24,17 @@ public struct Scaletor {
         }
 
         return notes
+    }
+
+    /// Generate an array of chords for a given root not and mode.
+    ///
+    /// - Parameters:
+    ///   - root: The root note of the mode.
+    ///   - mode: The mode to use when generating the chords.
+    /// - Throws: `ScaleError.theoreticalKey` if the root note is either double flat or double sharp.
+    /// - Returns: An array of `Chord` types for a given mode.
+    public static func makeChords(with root: Note, for mode: Mode) throws -> [Chord] {
+        let scale = try makeScale(from: root, for: mode)
+        return zip(scale, mode.chords).map(Chord.init)
     }
 }

@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.0] - 2020-07-29
+
+### Breaking
+
+- Extract `ChordVoicing` description method to `ChordFormatter`
+- Rename `Scaletor.generateScale()` to `Scaletor.makeScale`
+
+### Added
+
+- Make chord progressions for mode
+- `ChordFormatter` to produce string descriptions of chords easily, with style options
+
 ## [2.0.0] - 2020-07-26
 
 ### Added
