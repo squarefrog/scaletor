@@ -8,7 +8,7 @@ Generating a scale for a root note and mode couldn't be easier, simply call the 
 
 ```swift
 let root = try Note("C")
-let lydian = try Scaletor.generateScale(from: root, for: .lydian)
+let lydian = try Scaletor.makeScale(from: root, for: .lydian)
   .map(\.description)
   .joined(separator: " ")
 print(lydian) // [C D E F♯ G A B]
