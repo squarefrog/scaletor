@@ -7,11 +7,19 @@ Generate modal scales and chord voices in a type safe way.
 Generating a scale for a root note and mode couldn't be easier, simply call the following:
 
 ```swift
-let root = Note("C")
+let root = try Note("C")
 let lydian = try Scaletor.generateScale(from: root, for: .lydian)
   .map(\.description)
   .joined(separator: " ")
-print(lydian) // C D E F♯ G A B
+print(lydian) // [C D E F♯ G A B]
+```
+
+Generating chords for a mode is equally easy:
+
+```swift
+let root = try Note("C")
+let chords = try Scaletor.makeChords(with: root, for: MajorMode.ionian)
+print(chords) // [C major, D minor, E minor, F major, G major, A minor, B diminished]
 ```
 
 ## Supported modes
