@@ -37,3 +37,9 @@ public struct Note: Equatable {
         self.accidental = input.count == 2 ? Accidental(rawValue: accidental) : .natural
     }
 }
+
+extension Note: Hashable {
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(description)
+    }
+}
