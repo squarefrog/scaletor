@@ -5,6 +5,10 @@ public enum MajorMode: String, CaseIterable {
 }
 
 extension MajorMode: Mode {
+    public static var description: String {
+        "Major"
+    }
+
     public var chords: [ChordVoicing] {
         [.major, .minor, .minor, .major, .major, .minor, .diminished]
             .offset(by: index)

@@ -11,6 +11,10 @@ public enum MelodicMinorMode: String, CaseIterable {
 }
 
 extension MelodicMinorMode: Mode {
+    public static var description: String {
+        "Melodic Minor"
+    }
+
     public var chords: [ChordVoicing] {
         [.minor, .diminished, .augmented, .major, .major, .diminished, .diminished]
             .offset(by: index)

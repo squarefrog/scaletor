@@ -1,6 +1,7 @@
 import Foundation
 
-public protocol Mode {
-    var chords: [ChordVoicing] { get }
+public protocol Mode: CustomStringConvertible {
+    static var description: String { get }
     var intervals: [Interval] { get }
+    var chords: [ChordVoicing] { get }
 }
