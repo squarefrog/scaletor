@@ -1,12 +1,14 @@
 import Foundation
 
-public struct Note: Equatable {
+public struct Note: Equatable, Identifiable {
+    public let id: Int
     public let pitch: Pitch
     public let accidental: Accidental
 
     public init(pitch: Pitch, accidental: Accidental = .natural) {
         self.pitch = pitch
         self.accidental = accidental
+        self.id = Self.makeId(from: pitch, accidental: accidental)
     }
 
     /// Create a note from a string.
@@ -27,19 +29,28 @@ public struct Note: Equatable {
         guard (1...2).contains(input.count) else { throw NoteError.outOfBounds }
 
         let letter = String(input.prefix(1))
-        let accidental = String(input.suffix(1))
+        let symbol = String(input.suffix(1))
 
         guard let pitch = Pitch(rawValue: letter.lowercased()) else {
             throw NoteError.invalidNote
         }
 
-        self.pitch = pitch
-        self.accidental = input.count == 2 ? Accidental(rawValue: accidental) : .natural
+        let accidental = input.count == 2 ? Accidental(rawValue: symbol) : .natural
+
+        self.init(pitch: pitch, accidental: accidental)
     }
 }
 
 extension Note: Hashable {
     public func hash(into hasher: inout Hasher) {
         hasher.combine(description)
+    }
+}
+
+extension Note {
+    private static func makeId(from pitch: Pitch, accidental: Accidental) -> Int {
+        let id = pitch.id + accidental.id
+        let max = 12
+        return ((id % max) + max) % max
     }
 }

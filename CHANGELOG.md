@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - `Hashable` conformance for `Note`
 - `CustomStringConvertable` conformance
+- `Identifiable` conformance for `Note`
 
 ## [3.0.0] - 2020-07-29
 
